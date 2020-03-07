@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment{
+    dotnet = '/usr/bin/dotnet'
+    }
     stages{
         stage('Restore Packages'){
             steps{

@@ -6,17 +6,17 @@ pipeline{
     stages{
         stage('Restore Packages'){
             steps{
-                bat 'dotnet restore'
+                sh 'dotnet restore'
             }
         }
         stage('Clean'){
             steps{
-                bat 'dotnet clean'
+                sh 'dotnet clean'
             }
         }
         stage('Build'){
             steps{
-                bat 'dotnet build --configuration Release'
+                sh 'dotnet build --configuration Release'
             }
         }
     }
